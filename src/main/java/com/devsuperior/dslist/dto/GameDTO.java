@@ -4,7 +4,6 @@ import org.springframework.beans.BeanUtils;
 
 import com.devsuperior.dslist.entities.Game;
 
-import ch.qos.logback.core.joran.util.beans.BeanUtil;
 
 public class GameDTO {
 	
@@ -22,6 +21,7 @@ public class GameDTO {
 	}
 	
 	public GameDTO(Game entity) {
+		//Quando implementado o BeanUtils é obrigatorio incluir o Get e Set;
 		BeanUtils.copyProperties(entity, this);
 	}
 
